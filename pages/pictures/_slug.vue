@@ -6,7 +6,7 @@
       </v-carousel>
       <div v-else>
         <h1>No Images to display</h1>
-        <nuxt-link to="/pictures">Back</nuxt-link>
+        <nuxt-link to="/pictures/">Back</nuxt-link>
       </div>
     </div>
 </template>

@@ -6,10 +6,10 @@
           <img src="/images/manifest/elephantAppIcon.png" alt="elephantLogo" class="elephantLogo" />
         </nuxt-link>
         <v-spacer></v-spacer>
-        <nuxt-link tag="div" to="/pictures" class="nav-item">
+        <nuxt-link tag="div" to="/pictures/" class="nav-item">
           <a>Pictures</a>
         </nuxt-link>
-        <nuxt-link tag="div" to="/registry" class="nav-item">
+        <nuxt-link tag="div" to="/registry/" class="nav-item">
           <a>Registry</a>
         </nuxt-link>
       </div>

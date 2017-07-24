@@ -4,7 +4,7 @@
     <div class="galleryContent">
       <div class="portrait" v-for="gallery in galleries" :key="gallery.id">
         <v-card :img="gallery.url" height="300px" hover raised>
-          <v-card-actions class="white--text pl-3 pt-3 pb-3"> <nuxt-link :to="`/pictures/${gallery.slug}`">{{gallery.name}}</nuxt-link></v-card-actions>
+          <v-card-actions class="white--text pl-3 pt-3 pb-3"> <nuxt-link :to="`/pictures/${gallery.slug}/`">{{gallery.name}}</nuxt-link></v-card-actions>
         </v-card>
       </div>
     </div>
