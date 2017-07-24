@@ -82,6 +82,14 @@
       }
     }
 
+    @media(max-width: 320px) {
+      width:100vw;
+      margin: none;
+      .amazon_card_logo {
+        height: 99px !important;
+      }
+    }
+
     a {
       text-decoration: none;
       color: white;
