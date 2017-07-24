@@ -56,9 +56,18 @@ module.exports = {
   },
   generate: {
     routes: function () {
-      return api.albums.map(album => {
+      const albums = api.albums.map(album => {
         return '/pictures/' + album.slug
       })
+      const pictures = api.albums.map(album => {
+        return album.pictures.map(p => {
+          return '/pictures/' + album.slug + '/' + p.name
+        })
+      })
+      return [
+        ...albums,
+        ...[].concat.apply([], pictures)
+      ]
     }
   },
   plugins: [
