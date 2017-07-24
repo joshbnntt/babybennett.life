@@ -5,9 +5,10 @@
   "author": "Joshua Bennett <JoshuaBnntt@gmail.com>",
   "private": true,
   "dependencies": {
+    "@nuxtjs/pwa": "^0.2.0",
     "nuxt": "latest",
-    "vuetify": "latest",
-    "@nuxtjs/pwa": "^0.2.0"
+    "vue-virtual-scroll-list": "^1.1.2",
+    "vuetify": "latest"
   },
   "scripts": {
     "dev": "nuxt",

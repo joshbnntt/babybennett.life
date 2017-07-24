@@ -69,13 +69,15 @@ body {
   }
 }
   .nav-item {
-
+    .btn {
+      margin-top: 15px;
+    }
     a {
       text-decoration: none;
       color: black;
     }
     &.nuxt-link-active {
-      a {
+      a, .btn {
         color: white;
       }
       border-bottom-color: white;

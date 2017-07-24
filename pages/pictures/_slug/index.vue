@@ -1,32 +1,15 @@
 <template>
     <div>
-     <v-dialog v-model="dialog" fullscreen transition="dialog-bottom-transition" :overlay="false">
-        <v-card>
-          <v-toolbar dark class="primary">
-            <v-btn icon @click.native="dialog = false" dark>
-              <v-icon>close</v-icon>
-            </v-btn>
-          </v-toolbar>
-          <!--<v-carousel :cycle="false" :current="currentImage">
-            <v-carousel-item v-for="(image, index) in images" :key="image.name" v-bind:src="image.url"></v-carousel-item>
-          </v-carousel>-->
-          <div class="b-dark full-screen">
-            <image-loader 
-              :src="currentImage.url" 
-              :alt="currentImage.name">
-            </image-loader>
-          </div>
-        </v-card>
-      </v-dialog>
       <v-container  v-if="images && images.length > 0" fluid v-bind="{ [`grid-list-sm`]: true }">
+        <h2>{{name}}</h2>
         <v-layout row wrap>
           <v-flex
-            xs4
             v-for="(image, index) in images" :key="image.name"
+            class="xs"
           >
             <v-card flat tile>
               <v-card-media
-                :src="`${image.url}`"
+                :src="`${imageUrl(image)}`"
                 height="150px"
                 @click.native="openImage(image)"
               >
@@ -46,6 +29,7 @@
   import ImageLoader from '~/components/ImageLoader'
 
   export default {
+    scrollToTop: true,
     head () {
       return {
         title: 'Baby Bennett'
@@ -55,7 +39,9 @@
       return {
         loaded: false,
         images: store.getters.getGalleryImagesBySlug(params.slug),
-        dialog: false
+        dialog: false,
+        slug: params.slug,
+        name: store.state.albums.filter(a => a.slug === params.slug)[0].name
       }
     },
     data () {
@@ -68,8 +54,14 @@
     },
     methods: {
       openImage (image) {
-        this.currentImage = image
-        this.dialog = true
+        this.$router.push(`/pictures/${this.slug}/${image.name}`)
+      },
+      imageUrl (image) {
+        if (image.min) {
+          return image.min
+        } else {
+          return image.url
+        }
       }
     }
   }
@@ -77,7 +69,7 @@
 
 <style scoped lang="scss">
 .card__media {
-  height: 800px !important;
+  height: 100px !important;
 
   @media(min-width: 900px) {
     height: 500px !important;
@@ -104,5 +96,30 @@
 }
 .b-dark {
   background-color: #000;
+}
+
+.xs {
+  flex-basis: 0% !important;
+  max-width: 0% !important;
+
+  @media(min-width: 900px) {
+    flex-basis: 16% !important;
+    max-width: 100% !important;
+  }
+
+  @media(max-width: 850px) {
+    flex-basis: 33.33333333333333% !important;
+    max-width: 33.33333333333333% !important;    
+  }
+
+  @media(max-width: 415px) {
+    flex-basis: 50% !important;
+    max-width: 50% !important;      
+  }
+
+  @media(max-width: 320px) {
+    flex-basis: 50% !important;
+    max-width: 33.333333% !important; 
+  }
 }
 </style>
