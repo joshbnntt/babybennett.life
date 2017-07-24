@@ -77,6 +77,9 @@
       .card_logo {
         height:50px !important;
       }
+      .amazon_card_logo {
+        height: 110px !important;
+      }
     }
 
     a {
