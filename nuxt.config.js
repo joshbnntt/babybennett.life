@@ -1,13 +1,6 @@
+const api = require('./api')
+
 module.exports = {
-  // offline: {
-  //   publicPath: '/',
-  //   ServiceWorker: {
-  //     output: '../service-worker.js',
-  //     navigateFallbackURL: '/',
-  //     publicPath: '/service-worker.js'
-  //   }
-    
-  // },
   /*
   ** Headers of the page
   */
@@ -18,32 +11,20 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Baby Bennett Web Site' },
       { name: 'theme-color', content: 'aqua' },
-      { name: 'mobile-web-app-capable', content: 'yes' },
-      { name: 'application-name', content: 'Baby Bennett' },
-      { name: 'apple-mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-      { name: 'apple-mobile-web-app-title', content: 'Baby Bennett' },
-      { name: 'msapplication-TileImage', content: '/images/manifest/elephantAppIcon.png' },
-      { name: 'msapplication-TileColor', content: 'aqua' },
-      { name: 'msapplication-tap-highlight', content: 'no' },
       
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/images/manifest/elephantAppIcon.png' },
-      { rel: 'manifest', href: '/manifest.json' },
-      { rel: 'apple-touch-icon', href: '/images/manifest/elephantAppIcon.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons'},
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:500,900'},
-      { rel: 'apple-touch-icon', sizes: '72x72', href: '/images/manifest/elephantAppIcon.png' },
-      { rel: 'apple-touch-icon', sizes: '96x96', href: '/images/manifest/elephantAppIcon.png' },
-      { rel: 'apple-touch-icon', sizes: '144x144', href: '/images/manifest/elephantAppIcon.png' },
-      { rel: 'apple-touch-icon', sizes: '192x192', href: '/images/manifest/elephantAppIcon.png' },
     ],
     script: [
       {src: 'https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js', rel:'preload'},
-      {src: '/service-worker-registration.js'},
     ]
   },
+  modules: [
+    ['@nuxtjs/pwa', {icon: {iconSrc: './static/images/manifest/elephantAppIcon.png'}, manifest: {name: 'Baby Bennett', background_color: 'aqua'}}]
+  ],
   /*
   ** Global CSS
   */
@@ -74,16 +55,14 @@ module.exports = {
     ]
   },
   generate: {
-    routeParams: {
-      '/pictures/:slug': [
-        { slug: "sonagram"},
-        { slug: "announcement"} 
-      ] 
+    routes: function () {
+      return api.albums.map(album => {
+        return '/pictures/' + album.slug
+      })
     }
   },
   plugins: [
     '~plugins/twodigits.js',
-    '~plugins/vuetify.js',
-    // { src: '~plugins/offline.js', ssr: false }
+    '~plugins/vuetify.js'
   ]
 }

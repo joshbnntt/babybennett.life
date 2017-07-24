@@ -1,17 +1,22 @@
 import Vuex from 'vuex'
-import initialState from '~static/images'
+import initialState from '../api'
 
-const store = new Vuex.Store({
+const createStore = () => new Vuex.Store({
   state: {
-    pictures: initialState.pictures
+    albums: initialState.albums
   },
   getters: {
     galleries: state => {
-      return [...Object.keys(state.pictures).map(key => (
-        {...state.pictures[key][0], name: key}
-      ))]
+      return [
+        ...state.albums.map(a => {
+          return {name: a.name, slug: a.slug, id: a.id, url: a.pictures[0].url}
+        })
+      ]
+    },
+    getGalleryImagesBySlug: state => slug => {
+      return state.albums.filter(a => a.slug === slug)[0].pictures
     }
   }
 })
 
-export default store
+export default createStore

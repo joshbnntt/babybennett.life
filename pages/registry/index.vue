@@ -2,28 +2,26 @@
   <div class="registries">
     <h3> We are registered at:</h3>
     <v-card horizontal hover raised>
-      <v-card-column>
-        <v-card-row img="/Logo_Babies_R_Us.svg" :class="{card_logo:true}"></v-card-row>
-        <v-card-row actions>
+        <v-card-media src="/Logo_Babies_R_Us.svg" :class="{card_logo:true}">
+        </v-card-media>
+        <v-card-actions>
           <v-btn flat class="white--text" @click.native="goToThere(babiesRUs)">Go There</v-btn>
           <v-spacer></v-spacer>
           <v-btn icon dark ripple @click.native="goToThere(babiesRUs)">
             <v-icon>open_in_new</v-icon>
           </v-btn>
-        </v-card-row>
-      </v-card-column>
+        </v-card-actions>
     </v-card>
     <v-card horizontal hover raised>
-      <v-card-column>
-        <v-card-row img="/Amazon_logo_plain.svg" :class="{amazon_card_logo:true}"></v-card-row>
-        <v-card-row actions>
+        <v-card-media src="/Amazon_logo_plain.svg" :class="{amazon_card_logo:true}">
+        </v-card-media>
+        <v-card-actions>
           <v-btn flat class="white--text" @click.native="goToThere(amazon)">Go There</v-btn>
           <v-spacer></v-spacer>
           <v-btn icon dark ripple @click.native="goToThere(amazon)">
             <v-icon>open_in_new</v-icon>
           </v-btn>
-        </v-card-row>
-      </v-card-column>
+        </v-card-actions>
     </v-card>
   </div>
 </template>
@@ -50,7 +48,7 @@
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .registries {
     text-align: center;
   }
@@ -68,7 +66,7 @@
       height:70px !important;
     }
     .amazon_card_logo {
-      height: 100px !important;
+      height: 150px !important;
       background-size: 80% 80% !important;
       background-repeat: no-repeat !important;
     }

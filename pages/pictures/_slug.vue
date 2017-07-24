@@ -22,7 +22,7 @@
     asyncData ({params, store}) {
       return {
         loaded: false,
-        images: store.state.pictures[params.slug]
+        images: store.getters.getGalleryImagesBySlug(params.slug)
       }
     }
   }

@@ -1,24 +1,22 @@
 <template>
   <div class="outer">
-      <div v-if="!done">
-        <div class="countdown" @click="$emit('toggleWeeks')">
-          <slot name="title">
-            <span>Your event is in:</span>
-          </slot>
-          <p v-if="inWeeks">
-            <span class="digit">{{ weeks + 1 | two_digits }} </span> <span class="text">Weeks</span> 
-          </p>
-          <p v-else>
-            <span class="digit">{{ days + 1 | two_digits }} </span> <span class="text">Days</span> 
-          </p>
-        </div>
-      </div>
-      <div v-else>
-        <slot name="finished">
+    <div v-if="!done">
+      <div class="countdown" @click="$emit('toggleWeeks')">
+        <slot name="title">
+          <span>Your event is in:</span>
         </slot>
+        <p v-if="inWeeks">
+          <span class="digit">{{ weeks + 1 | two_digits }} </span> <span class="text">Weeks</span> 
+        </p>
+        <p v-else>
+          <span class="digit">{{ days + 1 | two_digits }} </span> <span class="text">Days</span> 
+        </p>
       </div>
     </div>
-    
+    <div v-else>
+      <slot name="finished">
+      </slot>
+    </div>
   </div>
 </template>
 <script>
