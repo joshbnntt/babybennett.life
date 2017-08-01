@@ -3,7 +3,11 @@
     <h1>Coming this August!</h1>
     <h2>We're having a Boy!!</h2>
     <count-down date="2017-08-23T00:00:00Z" :inWeeks="showInWeeks" @toggleWeeks="showInWeeks = !showInWeeks">
-      <h3 slot="title"> He'll be here in:</h3>
+      <h3 slot="title"> His due date is in:</h3>
+      <span slot="finished"></span>
+    </count-down>
+    <count-down date="2017-08-16T00:00:00Z" :inWeeks="showInWeeks" @toggleWeeks="showInWeeks = !showInWeeks">
+      <h3 slot="title"> But he will most likely be here in:</h3>
       <span slot="finished"></span>
     </count-down>
     <nuxt />
