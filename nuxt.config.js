@@ -23,7 +23,7 @@ module.exports = {
     ]
   },
   modules: [
-    ['@nuxtjs/pwa', {icon: {iconSrc: './static/images/manifest/hdpi_Elephant.png'}, manifest: {name: 'Baby Bennett', background_color: '#fff'}}]
+    ['@nuxtjs/pwa', {icon: {iconSrc: './static/images/manifest/xxhdpi_Elephant.png'}, manifest: {name: 'Baby Bennett', background_color: '#fff'}}]
   ],
   /*
   ** Global CSS
