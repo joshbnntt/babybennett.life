@@ -13,7 +13,7 @@
   export default {
     data () {
       return {
-        banner: { name: 'sonagram', url: '/images/IMG_20170228_090856-COLLAGE-min.jpg' }
+        banner: { name: 'daniel', url: '/images/1.jpg' }
       }
     },
     components: {
