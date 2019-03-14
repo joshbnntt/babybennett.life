@@ -1,11 +1,12 @@
-# dependencies
-node_modules
+# Hugo default output directory
+/public
 
-# logs
-npm-debug.log
+## OS Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# Nuxt build
-.nuxt
-
-# Nuxt generate
-dist
+# OSX
+.DS_Store
