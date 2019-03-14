@@ -3,8 +3,6 @@ title: Baby Judah Updates
 date: 2019-03-14T15:11:46.000Z
 draft: false
 ---
-🦁
-
 _Check back here for future updates._
 
 ## 2019/03/14
