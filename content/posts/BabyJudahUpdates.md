@@ -1,7 +1,7 @@
 ---
 title: "Baby Judah Updates"
 date: 2019-03-14T10:11:46-05:00
-draft: true
+draft: false
 ---
 
 *Check back here for future updates*
