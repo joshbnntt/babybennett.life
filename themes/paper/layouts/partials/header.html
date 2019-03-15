@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#FF6200">
   <!-- Title -->
   <title>
     {{- if not .IsHome }}
@@ -39,6 +40,7 @@
   {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
     {{ template "_internal/google_analytics_async.html" . }}
   {{ end }}
+  <link rel="manifest" href="/manifest.json">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="{{if eq .Kind `page` }}single{{else}}list{{ if .IsHome }} home{{ end }}{{end}}">

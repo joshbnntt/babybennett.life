@@ -91,7 +91,7 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: rgba(247, 96, 36, 0.89);
+  background: #EB4F00;
   color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
@@ -99,7 +99,7 @@ fieldset {
 }
 
 #contact button[type="submit"]:hover {
-  background: rgb(243, 162, 13);
+  background: #FF6200;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;

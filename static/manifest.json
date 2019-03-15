@@ -2,8 +2,9 @@
    "name": "Baby Bennett",
    "short_name": "Baby Bennett",
    "start_url": "/",
-   "theme_color": "#4CAF50",
-   "background_color": "#fff",
+   "theme_color": "#FF6200",
+   "display": "standalone",
+   "background_color": "#EB4F00",
    "icons": [
      {
        "src": "/images/lion.png",
