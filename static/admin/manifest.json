@@ -1,0 +1,19 @@
+{
+   "name": "Baby Bennett CMS",
+   "short_name": "BB CMS",
+   "start_url": "https://babybennett.life/admin/",
+   "theme_color": "#4CAF50",
+   "background_color": "#fff",
+   "icons": [
+     {
+       "src": "https://babybennett.life/images/elephantAppIcon.png",
+       "sizes": "192x192",
+       "type": "image/png"
+     },
+     {
+       "src": "https://babybennett.life/images/elephantAppIcon.png",
+       "sizes": "512x512",
+       "type": "image/png"
+     }
+   ]
+ }
