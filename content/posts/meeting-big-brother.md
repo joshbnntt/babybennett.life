@@ -14,13 +14,3 @@ Daniel meets Judah for the first time.
     {{< figure src="/images/lion.png" alt="lion" height="59" width="59">}}
   </div>
 </div>
- 
-<style>
-.row {
-display: flex;
-}
-
-.column {
-padding: 5px;
-}
-</style>
