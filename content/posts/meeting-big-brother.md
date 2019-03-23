@@ -6,17 +6,6 @@ draft: false
 Daniel meets Judah for the first time.
 {{< vimeo 325999024 >}}
 
-<style>
-.row {
-  display: flex;
-}
-
-.column {
-  
-  padding: 5px;
-}
-</style>
-
 <div class="row">
   <div class="column">
    {{< figure src="/images/elephantAppIcon.png" alt="elephant" >}}
@@ -26,3 +15,12 @@ Daniel meets Judah for the first time.
   </div>
 </div>
  
+<style>
+.row {
+display: flex;
+}
+
+.column {
+padding: 5px;
+}
+</style>
