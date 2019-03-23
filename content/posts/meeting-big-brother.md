@@ -3,18 +3,19 @@ title: Meeting Big Brother
 date: 2019-03-23T00:11:51.428Z
 draft: false
 ---
+Daniel meets Judah for the first time.
 <style>
 .row {
   display: flex;
 }
 
 .column {
-  flex: 50%;
+  
   padding: 5px;
 }
 </style>
 
-Daniel meets Judah for the first time.
+
 {{< vimeo 325999024 >}}
 <div class="row">
   <div class="column">
