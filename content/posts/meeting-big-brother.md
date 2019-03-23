@@ -3,8 +3,8 @@ title: Meeting Big Brother
 date: 2019-03-23T00:11:51.428Z
 draft: false
 ---
-{{< vimeo 325999024 >}}
-
 Daniel meets Judah for the first time.
 
-![](/images/elephantAppIcon.png)
+{{< figure src="/images/elephantAppIcon.png" alt="elephant" >}} {{< figure src="/images/lion.png" alt="lion" height="59" width="59">}}
+
+{{< vimeo 325999024 >}}
