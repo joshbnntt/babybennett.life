@@ -9,7 +9,7 @@ menu: main
 > "Weep no more; behold, the Lion of the tribe of Judah, the Root of David, has conquered..."
 > ~ Revelation 5:5
 
-**Walter**: From a Germanic name meaning "ruler of the army", composed of the elements wald "rule" and hari "army"<a href="#3"><sup>3</sup></a>. It was also the name of my Grandfather, Walter Bennett.
+**Walter**: From a Germanic name meaning "ruler of the army", composed of the elements wald "rule" and hari "army"<a href="#3"><sup>3</sup></a>. It was also the name of my Grandfather and Great Grandfather, Walter Bennett.
 
 - - -
 
