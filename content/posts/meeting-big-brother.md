@@ -1,6 +1,6 @@
 ---
 title: Meeting Big Brother
-date: 2019-03-23T00:11:51.428Z
+date: 2019-03-22T20:11:00.000Z
 draft: false
 ---
 Daniel meets Judah for the first time.
