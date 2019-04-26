@@ -1,7 +1,7 @@
 ---
 title: Judah's One Month Update
 date: 2019-04-26T21:24:13.818Z
-draft: true
+draft: false
 ---
 ![Judah 1 Month](/images/20190419_231317.jpg)
 
